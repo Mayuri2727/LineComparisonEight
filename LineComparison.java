@@ -35,10 +35,26 @@ public class LineComparison {
             System.out.println("Both lines are Not equal");
         }
     }
+    public static void lengthCompare(){
+        System.out.println("Enter Values to check the lines: ");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter line1 value: ");
+        double line1 = sc.nextInt();
+        System.out.println("Enter line2 value: ");
+        double line2 = sc.nextInt();
+        if(Double.compare(line1,line2) == 0){
+            System.out.println("line1=line2");
+        }else if (Double.compare(line1,line2) < 0){
+            System.out.println("line1 is less than line2");
+        }else {
+            System.out.println("line1 is greater than line2");
+        }
+    }
 
     public static void main(String[] args) {
             length();
             lengthEquals();
+            lengthCompare();
     }
 }
 
